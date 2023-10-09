@@ -9,6 +9,7 @@ export default defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
@@ -18,6 +19,7 @@ export default defineType({
         source: 'name',
         maxLength: 96,
       },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'logo',
@@ -26,6 +28,10 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      validation: (Rule) =>
+        Rule.required().error(
+          "please add a logos as it's going to be the main logo of the website",
+        ),
     }),
     defineField({
       name: 'image',
@@ -47,26 +53,41 @@ export default defineType({
           lists: [],
         },
       ],
+      validation: (Rule) =>
+        Rule.required().error(
+          "please add a bio as that's what's going to be displayed on the contact page",
+        ),
     }),
     defineField({
       name: 'email',
       title: 'Email',
       type: 'string',
+      validation: (Rule) =>
+        Rule.regex(
+          /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
+          {
+            name: 'email', // Error message is "Does not match email-pattern" if you omit the .error()
+            invert: false, // Boolean to allow any value that does NOT match pattern
+          },
+        ).error('Please enter a valid Email'),
     }),
     defineField({
       name: 'instagramLink',
       title: 'Instagram',
       type: 'url',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'artstationLink',
       title: 'Artstation',
       type: 'url',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'linkedinLink',
       title: 'Linkedin',
       type: 'url',
+      validation: (Rule) => Rule.required(),
     }),
   ],
   preview: {

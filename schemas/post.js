@@ -9,6 +9,7 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
@@ -18,12 +19,14 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',
       to: {type: 'author'},
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'images',
@@ -53,8 +56,10 @@ export default defineType({
                   {title: '(6/6) 100.00%', value: 'col-span-6'},
                 ],
               },
+              validation: (Rule) => Rule.required(),
             },
           ],
+          validation: (Rule) => Rule.required(),
         },
       ],
       options: {
@@ -71,6 +76,10 @@ export default defineType({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'blockContent',
+      validation: (Rule) =>
+        Rule.required().error(
+          'make sure to add th excerpt to let your audience know more about your illustrations',
+        ),
     }),
   ],
 
