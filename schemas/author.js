@@ -20,6 +20,14 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'logo',
+      title: 'Logo',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
@@ -39,6 +47,26 @@ export default defineType({
           lists: [],
         },
       ],
+    }),
+    defineField({
+      name: 'email',
+      title: 'Email',
+      type: 'string',
+    }),
+    defineField({
+      name: 'instagramLink',
+      title: 'Instagram',
+      type: 'url',
+    }),
+    defineField({
+      name: 'artstationLink',
+      title: 'Artstation',
+      type: 'url',
+    }),
+    defineField({
+      name: 'linkedinLink',
+      title: 'Linkedin',
+      type: 'url',
     }),
   ],
   preview: {
