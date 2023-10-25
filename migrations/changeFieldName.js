@@ -1,9 +1,8 @@
 import {createClient} from '@sanity/client'
 
-const token =
-  'skcI9JJnscLAvlZI13ZqRunMDErFofKuJZtTKKRqWHtPrBjJt6xLhNNLnVIkfYGWdjNwPvYkH1JGOOCv7tzZh5QFHs1mxaateKXhhKeMtSz1piEC142j2EOZMVWUlGKx85M3EpM5hIIHFOsfTQ9xn7q1otye72s2wUD0FEsWNnnuVYONl0BG'
-const projectId = '9ebfcrzt'
-const dataset = 'production'
+const token = process.env.SANITY_STUDIO_PROJECT_TOKEN
+const projectId = process.env.SANITY_STUDIO_PROJECT_ID
+const dataset = process.env.SANITY_STUDIO_PROJECT_DATASET
 const apiVersion = '2023-03-01'
 
 const client = createClient({
