@@ -25,7 +25,7 @@ export default defineConfig({
               S,
               context,
             }),
-            orderableDocumentListDeskItem({type: 'conceptArt', title: 'Concept Art', S, context}),
+            orderableDocumentListDeskItem({type: 'concept-art', title: 'Concept Art', S, context}),
             orderableDocumentListDeskItem({type: 'author', title: 'Author', S, context}),
           ])
       },

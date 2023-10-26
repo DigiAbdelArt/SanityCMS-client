@@ -12,8 +12,8 @@ const client = createClient({
   token,
 })
 
-const OLD_TYPE = 'post'
-const NEW_TYPE = 'illustrations'
+const OLD_TYPE = 'conceptArt'
+const NEW_TYPE = 'concept-art'
 
 const fetchDocuments = () =>
   client.fetch(

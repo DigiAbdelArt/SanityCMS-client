@@ -2,7 +2,7 @@ import {defineField, defineType} from 'sanity'
 import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
 
 export default defineType({
-  name: 'conceptArt',
+  name: 'concept-art',
   title: 'Concept Art',
   type: 'document',
   orderings: [orderRankOrdering],
