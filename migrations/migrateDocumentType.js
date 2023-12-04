@@ -25,7 +25,6 @@ const buildMutations = (docs) => {
   const mutations = []
 
   docs.forEach((doc) => {
-    console.log('movie', doc._id)
     // Updating an document _type field isn't allowed, we have to create a new and delete the old
     const newDocId = `${doc._id}-migrated`
     const newDocument = {...doc, ...{_id: newDocId, _type: NEW_TYPE}}

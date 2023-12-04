@@ -27,14 +27,19 @@ export default defineConfig({
               S,
               context,
             }),
-            orderableDocumentListDeskItem({type: 'concept-art', title: 'Concept Art', S, context}),
+            orderableDocumentListDeskItem({
+              type: 'concept-art',
+              title: 'Concept Art & Character Design',
+              S,
+              context,
+            }),
             S.listItem()
               .title('About')
               .child(S.document().schemaType('about').documentId('about'))
               .icon(LuUserCircle2),
             S.listItem()
-              .title('Socials')
-              .child(S.document().schemaType('socials').documentId('socials'))
+              .title('Contacts')
+              .child(S.document().schemaType('contacts').documentId('contacts'))
               .icon(LuShare2),
           ])
       },

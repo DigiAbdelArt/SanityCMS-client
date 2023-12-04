@@ -3,7 +3,7 @@ import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list
 
 export default defineType({
   name: 'concept-art',
-  title: 'Concept Art',
+  title: 'Concept Art & Character Design',
   type: 'document',
   orderings: [orderRankOrdering],
   fields: [
