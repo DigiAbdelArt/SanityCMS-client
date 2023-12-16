@@ -7,8 +7,7 @@ import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 import {LuShare2, LuUserCircle2} from 'react-icons/lu'
 
 export default defineConfig({
-  name: 'default',
-  title: 'myNewSanityProj',
+  title: 'Digiabdelart-Studio',
 
   projectId: process.env.SANITY_STUDIO_PROJECT_ID,
   dataset: process.env.SANITY_STUDIO_PROJECT_DATASET,
